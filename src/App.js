@@ -19,6 +19,38 @@ import { ExampleUseImperativeHandle } from "./hooks/useImperativeHandle/Example-
 import { ExampleUseLocalStorage } from "./hooks/useLocalStorage/Example-useLocalStorage";
 import Route from "./Route";
 
+const Title = ({ children }) => {
+  return (
+    <p
+      style={{
+        padding: "10px",
+        margin: "20",
+        border: " 1px solid #eaeaea",
+        borderRadius: "3px",
+        fontFamily: "cursive",
+        fontSize: "20px",
+      }}
+    >
+      {children}
+    </p>
+  );
+};
+
+const Link = ({ children, href }) => {
+  return (
+    <a
+      style={{
+        fontFamily: "cursive",
+        fontSize: "15px",
+        textDecoration: "none",
+      }}
+      href={href}
+    >
+      {children}
+    </a>
+  );
+};
+
 function App() {
   return (
     <>
@@ -26,54 +58,65 @@ function App() {
         <div className="App">
           <Route path="/">
             <>
-              <p>Important</p>
-              <a href="/useStateExample">useState</a>
+              <Title>Important Hooks</Title>
+              <Link href="/useStateExample">useState</Link>
               <br />
-              <a href="/useEffectExample">useEffect</a>
+              <Link href="/useEffectExample">useEffect</Link>
               <br />
-              <a href="/useContextExample">useContext</a>
+              <Link href="/useContextExample">useContext</Link>
               <br />
-              <p>Lesser Used</p>
-              <a href="/useRefExample">useRef</a>
+              <Title>Lesser Used</Title>
+              <Link href="/useRefExample">useRef</Link>
               <br />
-              <a href="/useMemoExample">useMemo</a>
+              <Link href="/useMemoExample">useMemo</Link>
               <br />
-              <a href="/useCallbackExample">useCallback</a>
+              <Link href="/useCallbackExample">useCallback</Link>
               <br />
-              <a href="/useReducerExample">useReducer</a>
+              <Link href="/useReducerExample">useReducer</Link>
               <br />
-              <a href="/useTransitionExample">useTransition</a>
+              <Link href="/useTransitionExample">useTransition</Link>
               <br />
-              <a href="/useDeferredValueExample">useUseDeferredValue</a>
+              <Link href="/useDeferredValueExample">useUseDeferredValue</Link>
               <br />
-              <a href="/useLayoutEffectExample">useLayoutExample</a>
+              <Link href="/useLayoutEffectExample">useLayoutExample</Link>
               <br />
-              <a href="/useDebugValueExample">useDebugValueExample</a>
+              <Link href="/useDebugValueExample">useDebugValueExample</Link>
               <br />
-              <a href="/useImperativeHandleExample">
+              <Link href="/useImperativeHandleExample">
                 useImperativeHandleExample
-              </a>
+              </Link>
               <br />
-              <a href="/useIdExample">useIdExample</a>
-              <p>Custom Hooks</p>
-              <a href="/useLocalStorage">useLocalStorage</a>
+              <Link href="/useIdExample">useIdExample</Link>
+              <Title>Custom Hooks</Title>
+              <Link href="/useLocalStorage">useLocalStorage</Link>
               <br />
-              <a href="/useUpdateLogger">useUpdateLogger</a>
+              <Link href="/useUpdateLogger">useUpdateLogger</Link>
               <br />
-              <a href="/useToggle">useToggle</a>
+              <Link href="/useToggle">useToggle</Link>
               <br />
-              <a href="/useTimeout">useTimeout</a>
+              <Link href="/useTimeout">useTimeout</Link>
               <br />
-              <a href="/useDebounce">useDebounce</a>
+              <Link href="/useDebounce">useDebounce</Link>
               <br />
-              <a href="/useUpdateEffect">useUpdateEffect</a>
+              <Link href="/useUpdateEffect">useUpdateEffect</Link>
               <br />
             </>
           </Route>
           <br />
-          <a href="/">
-            <button>Back</button>
-          </a>
+          <Link href="/">
+            <button
+              style={{
+                background: "red",
+                border: "none",
+                borderRadius: "3px",
+                color: "#fff",
+                fontSize: "12px",
+                padding: "7px 15px",
+              }}
+            >
+              Back
+            </button>
+          </Link>
           <Route path="/useStateExample">
             <ExampleUseState />
           </Route>
