@@ -1,5 +1,7 @@
 import React from "react";
+import { ExampleUseDebugValue } from "./hooks/Example-useDebugValue";
 import { ExampleUseEffect } from "./hooks/Example-useEffect";
+import { ExampleUseLayoutEffect } from "./hooks/Example-useLayoutEffect";
 import { ExampleUseMemo } from "./hooks/Example-useMemo";
 import { ExampleUseReducer } from "./hooks/Example-useReducer";
 import { ExampleUseRef } from "./hooks/Example-useRef";
@@ -9,6 +11,8 @@ import { ExampleUseCallback } from "./hooks/useCallback/Example-useCallback";
 import { ExampleUseContext } from "./hooks/useContext/Example-useContext";
 import { ThemeProvider } from "./hooks/useContext/ThemeContext";
 import { ExampleUseDeferredValue } from "./hooks/useDeferredValue/Example-useDeferredValue";
+import { ExampleUseImperativeHandle } from "./hooks/useImperativeHandle/Example-useImperativeHandle";
+import { ExampleUseLocalStorage } from "./hooks/useLocalStorage/Example-useLocalStorage";
 import Route from "./Route";
 
 function App() {
@@ -36,7 +40,21 @@ function App() {
               <br />
               <a href="/useTransitionExample">useTransition</a>
               <br />
-              <a href="/useUseDeferredValueExample">useUseDeferredValue</a>
+              <a href="/useDeferredValueExample">useUseDeferredValue</a>
+              <br />
+              <a href="/useLayoutEffectExample">useLayoutExample</a>
+              <br />
+              <a href="/useDebugValueExample">useDebugValueExample</a>
+              <br />
+              <a href="/useImperativeHandleExample">
+                useImperativeHandleExample
+              </a>
+              <a href="/useIdExample">useIdExample</a>
+              <p>Custom Hooks</p>
+              <a href="/useLocalStorage">useLocalStorage</a>
+              <br />
+              <a href="/useUpdateLogger">useUpdateLogger</a>
+              <br />
             </>
           </Route>
           <br />
@@ -67,8 +85,28 @@ function App() {
           <Route path="/useTransitionExample">
             <ExampleUseTransition />
           </Route>
-          <Route path="/useUseDeferredValueExample">
+          <Route path="/useDeferredValueExample">
             <ExampleUseDeferredValue />
+          </Route>
+          <Route path="/useLayoutEffectExample">
+            <ExampleUseLayoutEffect />
+          </Route>
+          <Route path="/useDebugValueExample">
+            <ExampleUseDebugValue />
+          </Route>
+          <Route path="/useImperativeHandleExample">
+            <ExampleUseImperativeHandle />
+          </Route>
+          <Route path="/useIdExample">
+            <ExampleUseImperativeHandle />
+          </Route>
+          <Route path="/useLocalStorage">
+            <ExampleUseLocalStorage />
+          </Route>
+          <Route path="/useUpdateLogger">
+            <div>
+              <p>Please reference code</p>
+            </div>
           </Route>
         </div>
       </ThemeProvider>
