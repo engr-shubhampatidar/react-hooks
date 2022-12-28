@@ -1,4 +1,8 @@
 import React from "react";
+import { ExampleUseToggle } from "./hooks/Custom Hooks/1-UseToggle/Example-useToggle";
+import { ExampleUseTimeout } from "./hooks/Custom Hooks/2-UseTimeout/Example-useTimeout";
+import { ExampleUseDebounce } from "./hooks/Custom Hooks/3-UseDebounce/Example-useDebounce";
+import { ExampleUseUpdateEffect } from "./hooks/Custom Hooks/4-UseUpdateEffect/Example-useUpdateEffect";
 import { ExampleUseDebugValue } from "./hooks/Example-useDebugValue";
 import { ExampleUseEffect } from "./hooks/Example-useEffect";
 import { ExampleUseLayoutEffect } from "./hooks/Example-useLayoutEffect";
@@ -49,11 +53,20 @@ function App() {
               <a href="/useImperativeHandleExample">
                 useImperativeHandleExample
               </a>
+              <br />
               <a href="/useIdExample">useIdExample</a>
               <p>Custom Hooks</p>
               <a href="/useLocalStorage">useLocalStorage</a>
               <br />
               <a href="/useUpdateLogger">useUpdateLogger</a>
+              <br />
+              <a href="/useToggle">useToggle</a>
+              <br />
+              <a href="/useTimeout">useTimeout</a>
+              <br />
+              <a href="/useDebounce">useDebounce</a>
+              <br />
+              <a href="/useUpdateEffect">useUpdateEffect</a>
               <br />
             </>
           </Route>
@@ -107,6 +120,18 @@ function App() {
             <div>
               <p>Please reference code</p>
             </div>
+          </Route>
+          <Route path="/useToggle">
+            <ExampleUseToggle />
+          </Route>
+          <Route path="/useTimeout">
+            <ExampleUseTimeout />
+          </Route>
+          <Route path="/useDebounce">
+            <ExampleUseDebounce />
+          </Route>
+          <Route path="/useUpdateEffect">
+            <ExampleUseUpdateEffect />
           </Route>
         </div>
       </ThemeProvider>
